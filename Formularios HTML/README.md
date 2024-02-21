@@ -3,8 +3,8 @@
 form action="/next-page" method="post">
   fieldset>
     legend>Datos Básicos</legend>
-  /fieldset>
-/form>
+  fieldset>
+form>
 
 input> tag: it is the most versatile tag, it defines a field within a form and has three main attributes:
 
