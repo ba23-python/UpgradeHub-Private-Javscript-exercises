@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <img src="./image/Discord-logo.png" alt="logo" class="logo" />
+      <nav>
+        <ul class="menu">
+          <li><a href="#" class="link"> Descarga</a></li>
+          <li><a href="#" class="link"> Nitro</a></li>
+          <li><a href="#" class="link"> Descubrir</a></li>
+          <li><a href="#" class="link"> Seguridad</a></li>
+          <li><a href="#" class="link"> Soporte tecnico </a></li>
+          <li><a href="#" class="link"> Blog</a></li>
+          <li><a href="#" class="link"> Empleo</a></li>
+        </ul>
+        <a href="#" class="link btn"> abrir discord</a>
+      </nav>
+    </header>
+
+    <h1>Formulario</h1>
+<!---Formularios estaticos ya que aun no tienen Javascript, en HTML son sólo visuales-->
+    <form action="main.php" method="post"> <!--no se recomienda el metodo GET, solo POST en el tag de form por razones de seguridad. Se trata de como viajan los datos. si se usa GET van a ser visibles lo que no es seguro-->
+        <fieldset>
+            <legend>Datos Personales</legend>
+
+            <label for="InputName">
+            Nombre:
+            </label>
+            <input 
+                type="text" 
+                name="FirstName" 
+                id="InputName" 
+                placeholder="Maria"
+                required maxlength="12"
+            />
+            <label for="InputLastName">
+                Apellido:
+            </label>
+    
+            <fieldset>
+                <input type="text" 
+                name="LastName" 
+                id="InputLastName" 
+                placeholder="Ruiz"
+                required maxlength="12"/>
+            </fieldset>
+
+        
+        
+
+        <fieldset>
+            <legend>Otros campos</legend>
+            <label for="EmailAddress">
+            EmailAddress:
+            </label>
+            <input type="email" name="EmailAddress" id="EmailAddress" placeholder="example@website.com"  />
+        </fieldset>
+
+        <fieldset>
+            <label for="StartDate">
+            Start Date:
+            </label>
+            <input type="date" name="StartDate"/>
+        </fieldset>
+
+        <fieldset>
+            <legend>Campos de selección</legend>
+            <label for="">Pais</label>
+            <select name="country" id="country">
+                <option value="0">Seleccione una opción</option>
+                <option value="ES">España</option>
+                <option value="FR">Francia</option>
+                <option value="PT">Portugal</option>
+            </select>
+        <fieldset>
+            <div>
+                <label>Tienes mascotas?
+                    <input type="radio" name="pets"  id="petYes" value="si"/>
+
+                    <label for="petYes" class="labelRadio">Si</label>
+
+                    <input type="radio" name="pets" id="PetNo" value="no"> 
+                    <label for="petNo">No</label>
+                <!--importante id en el input line tiene que ser igual a label for=""" para que se relacionen al mismo label-->
+                </label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+           
+            
+                <label>¿Que haces en tu tiempo libre?
+
+                    <input type="checkbox" name="" id="" value="01"/> Ver TV
+
+                    <input type="checkbox" name="" id="" value="02"/> Estudiar HTML-CSS
+                </label>
+            
+
+                <!---Para cargar archivo de imagen te abre la carpeta de escritorio---->
+            <label>Foto</label>
+            <input type="image" type="file"/>
+            
+        </fieldset>
+
+        <fieldset>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+        </fieldset>
+
+        <input 
+        type="text" 
+        name="username" 
+        id="username" 
+        placeholder="pepino21"
+        required
+        title="letras y numeros tamaño minimo 8 y max 12"
+        pattern="[a-zA-Z0-9]{8,12}"
+        />
+
+        <input 
+        type="password" 
+        name="" 
+        id="" 
+        placeholder="contraseña"
+        title="letras y numeros tamaño minimo 8 y max 12"
+        pattern="[a-zA-Z0-9]{8,12}"
+        />
+       
+<!---boton ENVIAR. Se le puede poner class para que con CSS se le da diseño-->
+        
+        <input type="submit" value="enviar" class="btn-enviar"/>
+        </fieldset>
+    
+
+
+    </form>
