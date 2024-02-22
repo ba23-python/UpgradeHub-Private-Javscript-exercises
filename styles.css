@@ -1,0 +1,49 @@
+body{
+    background: beige;
+
+}
+
+.flex-container{
+    border: 1px solid black;  
+    background: #ccc;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-flow: row wrap; /*combina flex-direction: row y flex-wrap: wrap;Se pueden quitar si se aplica flex-flow*/
+    justify-content: space-around; /*space-evenly, space-between, flex-start, flex-end*/
+    align-items: center;
+    align-content: space-between;/*space-evenly, space-between, flex-start, flex-end*/
+}
+
+.caja{
+    border: 1px solid #696767;
+    background-color: white;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    width: 200px; /*si no tienen tamaño, ocuparan 100% de la width y height*/
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+    margin: 5px;
+
+}
+
+.c1{
+    background: lightcoral;
+    order: 3; /*change orden*/
+    flex-basis:50%
+}
+
+.c2{
+    background: lightskyblue;
+    order: 1;
+    flex-grow: 1;/* tienen alta prioridas de expandirse con 10 que con 1*/
+}
+
+.c3{
+    background: lightpink;
+    order:2;
+    flex-grow: 1;/* tienen menos priorida de expandirse*/
+}
